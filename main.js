@@ -93,9 +93,44 @@
 
 // ARROW FUNCTIONS
 
-const addFunction = (num1, num2) => {
-  return num1 + num2;
-};
+// const addFunction = (num1, num2) => {
+//   return num1 + num2;
+// };
 
-const sum = addFunction(2, 3);
-console.log(sum);
+// const sum = addFunction(2, 3);
+// console.log(sum);
+
+// SCOPE
+// 1. Block Scope
+// if (true) {
+//   const myName = "Anesu"; // let & const variables can only be acceses from within the code block they are declared in
+//   console.log(myName);
+// }
+
+// Function Scope
+// function myFunction() {
+//   const myName = "Deloris"; // let & const variables can only be acceses from within the function they are declared in
+//   console.log(myName);
+// }
+
+// myFunction();
+
+// Global Scope
+
+const myNum = 23;
+
+if (true) {
+  const myName = "Anesu";
+  console.log(myName);
+  console.log(myNum);
+}
+
+function myFunction() {
+  const myName = "Deloris"; // let & const variables can only be acceses from within the function they are declared in
+  console.log(myName);
+  console.log(myNum);
+}
+myFunction();
+
+// The global scope is the outermost scope in JavaScript. Variables declared outside of any function or block are in the global scope and can be accessed from anywhere in the code.
+// Note that the myName variables are different in the function and the if code block, meaning that they are not the same variable, even though they have the same name. This is because they are declared in different scopes.
