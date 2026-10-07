@@ -68,8 +68,34 @@
 //   count++;
 // } while (count < 5);
 
-const numArray = [1, 2, 3, 4, 5];
+// const numArray = [1, 2, 3, 4, 5];
 
-for (const num of numArray) {
-  console.log("Iteration number " + num);
-}
+// for (const num of numArray) {
+//   console.log("Iteration number " + num);
+// }
+
+// FUNCTIONS
+
+// function greet(city) {      // city is a parameter
+//   console.log("Hello " + city);
+// }
+
+// greet("Gweru");         // Gweru, Harare & Masvingo are called argumets
+// greet("Harare");
+// greet("Masvingo");
+
+// function addFunction(num1, num2) {
+//   return num1 + num2;
+// }
+
+// const sum = addFunction(2, 3);
+// console.log(sum);
+
+// ARROW FUNCTIONS
+
+const addFunction = (num1, num2) => {
+  return num1 + num2;
+};
+
+const sum = addFunction(2, 3);
+console.log(sum);
