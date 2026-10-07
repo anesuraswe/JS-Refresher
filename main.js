@@ -46,8 +46,24 @@
 //   final expression
 // }
 
+// let count = 1;
+// while (count < 5) {
+//   console.log("Iteration number " + count);
+//   count++;
+// }
+
+// DO WHILE LOOP
+
+// initializer
+// do {
+//   code to run
+
+//   final-expression
+// } while (condition)
+
 let count = 1;
-while (count < 5) {
+do {
   console.log("Iteration number " + count);
+
   count++;
-}
+} while (count < 5);
