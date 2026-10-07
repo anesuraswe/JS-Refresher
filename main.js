@@ -52,7 +52,7 @@
 //   count++;
 // }
 
-// DO WHILE LOOP
+// DO WHILE LOOP - runs the code at least once before evaluating the condition
 
 // initializer
 // do {
@@ -61,9 +61,15 @@
 //   final-expression
 // } while (condition)
 
-let count = 1;
-do {
-  console.log("Iteration number " + count);
+// let count = 1;
+// do {
+//   console.log("Iteration number " + count);
 
-  count++;
-} while (count < 5);
+//   count++;
+// } while (count < 5);
+
+const numArray = [1, 2, 3, 4, 5];
+
+for (const num of numArray) {
+  console.log("Iteration number " + num);
+}
