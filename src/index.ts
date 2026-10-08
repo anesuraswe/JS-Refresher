@@ -100,10 +100,41 @@
 //   resize: () => {},
 // };
 
-
-
 // LITERAL TYPES - exact or specific values
-type Quantity = 50 | 100
-let quantity: Quantity = 100
+type Quantity = 50 | 100;
+let quantity: Quantity = 100;
+
+type Metric = "kg" | "g";
+let metric: Metric = "g";
 
 // NULLABLE TYPES
+function greet(name: string | null | undefined) {
+  if (name) console.log(name.toUpperCase);
+  else console.log("Hola!");
+}
+
+greet(null);
+
+// OPTIONAL CHAINING
+type Customer = {
+  birthday: Date;
+};
+function getCustomer(id: number): Customer | null | undefined {
+  return id === 0 ? null : { birthday: new Date() };
+}
+
+let customer = getCustomer(0);
+// if (customer !== null && customer !== undefined)  
+// we can replace the if statement with the optional property access operator [?.]
+    console.log(customer?.birthday?.getFullYear());
+
+// Optinal element access operator - when dealing with arrays (e.g. customers)
+// INSTEAD OF
+// if (customers !== null && customers !== undefined)  
+//      customers[0]
+// WE simply DO
+// customers?.[0]
+
+// OPTIONAL CALL
+let log: any = null
+log?.('a')
